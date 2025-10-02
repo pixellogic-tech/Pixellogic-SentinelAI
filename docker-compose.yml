@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  sentinelai:
+    build: .
+    container_name: sentinelai
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+  db:
+    image: postgres:15
+    container_name: sentinelai_db
+    environment:
+      POSTGRES_USER: sentinel
+      POSTGRES_PASSWORD: sentinel
+      POSTGRES_DB: sentinelai
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+volumes:
+  db_data:
+
