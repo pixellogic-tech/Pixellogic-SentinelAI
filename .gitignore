@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+logs/
+*.log
+
+# Reports & outputs
+reports/
+*.pdf
+*.csv
+*.json
+
+# Virtual envs and env files
+.env
+.venv/
+venv/
+ENV/
+env/
+*.env
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Node/React frontend
+dashboard/react/node_modules/
+dashboard/react/build/
+
+# Databases
+*.db
+*.sqlite
+
+# Mac / System files
+.DS_Store
