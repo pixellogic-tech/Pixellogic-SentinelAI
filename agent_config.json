@@ -1,0 +1,34 @@
+{
+  "agents": {
+    "recon": {
+      "enabled": true,
+      "concurrency": 50,
+      "ports": [
+        22,
+        80,
+        443,
+        3389,
+        445
+      ],
+      "timeout": 1.0
+    },
+    "vuln": {
+      "enabled": true,
+      "signatures": [
+        {
+          "match": "Apache/2.",
+          "name": "Outdated Apache (possible CVE)",
+          "severity": "Medium"
+        },
+        {
+          "match": "OpenSSH_",
+          "name": "OpenSSH server detected",
+          "severity": "Low"
+        }
+      ]
+    },
+    "collector": {
+      "enabled": true
+    }
+  }
+}
